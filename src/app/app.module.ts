@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
@@ -24,7 +25,8 @@ import { HeaderComponent } from './components/header/header.component';
     RouterModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

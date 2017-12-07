@@ -1,4 +1,5 @@
-<div class="container">
+<!-- <div class="container">
+  <button type="button" class="btn btn-primary waves-light" mdbRippleRadius>Primary</button>
   <div class="row">
     <div class="col-xs-12">
       <form (ngSubmit)="signIn()" #heroForm="ngForm">
@@ -11,19 +12,55 @@
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" required [(ngModel)]="user.email" name="email" #email="ngModel" [email]="true" autocomplete="off">
+          <input type="email" class="form-control" id="email" required [(ngModel)]="user.email" name="email" #email="ngModel" [email]="true"
+            autocomplete="off">
           <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
             Email is required
           </div>
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password" #password="ngModel" autocomplete="off" >
+          <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password" #password="ngModel"
+            autocomplete="off">
           <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
             Password is required
           </div>
-        </div>     
-         <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+<div class="container h-100 sign-in">
+  <div class="row h-100">
+    <div class="offset-3"></div>
+    <div class="col-6 my-auto">
+      <!--Register form-->
+      <form class="z-depth-5 signup-form">
+        <p class="h5 text-center mb-4">Sign up</p>
+
+        <div class="md-form">
+          <i class="fa fa-user prefix grey-text"></i>
+          <input type="text" id="orangeForm-name" class="form-control" mdbActive>
+          <label for="orangeForm-name">Your name</label>
+        </div>
+        <div class="md-form">
+          <i class="fa fa-envelope prefix grey-text"></i>
+          <input type="text" id="orangeForm-email" class="form-control" mdbActive>
+          <label for="orangeForm-email">Your email</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fa fa-lock prefix grey-text"></i>
+          <input type="password" id="orangeForm-pass" class="form-control" mdbActive>
+          <label for="orangeForm-pass">Your password</label>
+        </div>
+
+        <div class="text-center">
+          <button class="btn btn-deep-orange waves-light" mdbRippleRadius>Sign up</button>
+        </div>
+
       </form>
     </div>
   </div>
